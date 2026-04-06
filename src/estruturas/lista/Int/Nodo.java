@@ -2,8 +2,8 @@ package estruturas.lista.Int;
 
 public class Nodo {
 
-    int item;
-    Nodo prox;
+    public int item;
+    public Nodo prox;
     Nodo ant;
 
     public Nodo(int valor){

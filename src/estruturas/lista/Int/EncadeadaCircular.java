@@ -7,16 +7,16 @@ public class EncadeadaCircular extends Lista {
 
     @Override
     public void inserirInicio(int item) throws Exception {
-        Nodo aux = new Nodo(item);
+        Nodo novo = new Nodo(item);
 
         if (vazia()) {
-            head = aux;
-            ultimo = aux;
-            aux.prox = head;
+            head = novo;
+            ultimo = novo;
+            novo.prox = head;
         } else {
-            ultimo.prox = aux;
-            aux.prox = head;
-            head = aux;
+            ultimo.prox = novo;
+            novo.prox = head;
+            head = novo;
         }
     }
 
@@ -25,9 +25,7 @@ public class EncadeadaCircular extends Lista {
         Nodo novo = new Nodo(item);
 
         if (vazia()) {
-            head = novo;
-            ultimo = novo;
-            novo.prox = head;
+            inserirInicio(item);
             return;
         }
         // caso 1: um elemento

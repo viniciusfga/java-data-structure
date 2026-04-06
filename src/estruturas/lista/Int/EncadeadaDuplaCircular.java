@@ -30,6 +30,27 @@ public class EncadeadaDuplaCircular extends Lista {
     @Override
     public void inserirOrdenado(int item) throws Exception {
 
+        // CASO 1: lista vazia ou menor que o 1 item
+        if (vazia() || item < head.item) {
+            inserirInicio(item);
+            return;
+        }
+
+        Nodo novo = new Nodo(item);
+
+        Nodo aux = head;
+        while (aux.prox != head && aux.prox.item < item) {
+            aux = aux.prox;
+        }
+        novo.prox = aux.prox;
+        novo.ant = aux;
+        aux.prox.ant = novo;
+
+        aux.prox = novo;
+
+        if (aux == ultimo) {
+            ultimo = novo;
+        }
     }
 
     @Override
@@ -56,7 +77,21 @@ public class EncadeadaDuplaCircular extends Lista {
 
     @Override
     public int removerInicio() throws Exception {
-        return 0;
+
+        if (vazia()) throw new Exception("Lista vazia");
+
+        int valorRemovido = head.item;
+
+        if (head == ultimo) {
+            head = null;
+            ultimo = null;
+            return valorRemovido;
+        } else {
+            ultimo.prox = head.prox;
+            head.prox.ant = ultimo;
+            head = head.prox;
+            return valorRemovido;
+        }
     }
 
     @Override
@@ -139,7 +174,19 @@ public class EncadeadaDuplaCircular extends Lista {
 
     @Override
     public int buscar(int chave) throws Exception {
-        return 0;
+
+        if (vazia()) throw new Exception("Lista vazia");
+
+        Nodo aux = head;
+
+        if (aux.item == chave) return aux.item;
+
+        do {
+            if (aux.prox.item == chave) return aux.prox.item;
+            aux = aux.prox;
+        } while (aux.prox != head && aux.prox.item != chave);
+
+        throw new Exception("Elemento não encontrado");
     }
 
     @Override
@@ -154,25 +201,29 @@ public class EncadeadaDuplaCircular extends Lista {
 
     @Override
     public void imprimir() {
+        if (head == null) {
+            System.out.println("Lista vazia");
+            return;
+        }
+
         Nodo aux = head;
 
         do {
             System.out.print(aux.item + " ");
             aux = aux.prox;
         } while (aux != head);
+
+        System.out.println();
     }
 
     public static void main(String[] args) throws Exception {
 
         EncadeadaDuplaCircular lista = new EncadeadaDuplaCircular();
 
-        lista.inserirFim(1);
-        lista.inserirFim(2);
-        lista.inserirFim(3);
-
-        lista.inserirInicio(0);
-
-        lista.remover(2);
+        lista.inserirOrdenado(2);
+        lista.inserirOrdenado(5);
+        lista.inserirOrdenado(1);
+        lista.inserirOrdenado(3);
 
         lista.imprimir();
     }
