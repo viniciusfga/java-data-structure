@@ -1,6 +1,6 @@
 package estruturas.fila;
 
-class Fila {
+public class Fila {
 
     int item[];
     int first;

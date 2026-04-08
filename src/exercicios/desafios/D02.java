@@ -6,7 +6,7 @@ Remova todas as ocorrências de um valor informado
 removerTodos(int valor)
  */
 
-import estruturas.lista.Int.Nodo;
+import estruturas.lista.inteiro.Nodo;
 
 public class D02 {
 
