@@ -35,13 +35,7 @@ public class Pilha {
 
     public void imprimir() {
         for (int i = inicio; i < fim; i++) {
-            System.out.println(elementos[i]);
+        System.out.println("[" + elementos[i] + "]");
         }
-    }
-
-    public static void main(String[] args) {
-
-
-
     }
 }

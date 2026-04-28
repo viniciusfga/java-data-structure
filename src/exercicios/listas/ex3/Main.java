@@ -1,4 +1,4 @@
-package exercicios.atividadeListas.l1Estatica.Exercicio03;
+package exercicios.listas.ex3;
 
 public class Main {
 

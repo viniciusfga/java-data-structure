@@ -1,4 +1,4 @@
-package exercicios.atividadePilhas;
+package exercicios.desafios;
 
 import java.util.Scanner;
 
@@ -10,12 +10,12 @@ import java.util.Scanner;
     Entrada: N N S → inválido
     Entrada: N N S S → válido
  */
-public class LabPilhas {
+public class D4LabPilhas {
 
     char[] elementos;
     int fim;
 
-    public LabPilhas(int maxTam) {
+    public D4LabPilhas(int maxTam) {
         elementos = new char[maxTam];
         fim = 0;
     }
@@ -69,7 +69,7 @@ public class LabPilhas {
                 || (primeira == 'O' && segunda == 'L');
     }
 
-    public static boolean validarCaminho(LabPilhas lab, String[] direcoes) {
+    public static boolean validarCaminho(D4LabPilhas lab, String[] direcoes) {
         if (direcoes == null || direcoes.length == 0) {
             System.out.println("Caminho vazio");
             return false;
@@ -109,7 +109,7 @@ public class LabPilhas {
 
         String[] direcoes = caminho.split("");
 
-        LabPilhas lab = new LabPilhas(direcoes.length);
+        D4LabPilhas lab = new D4LabPilhas(direcoes.length);
 
         if (validarCaminho(lab, direcoes)) {
             System.out.println("válido");

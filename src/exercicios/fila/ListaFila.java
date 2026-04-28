@@ -1,4 +1,4 @@
-package exercicios.atividadeListas.l05Fila;
+package exercicios.fila;
 
 class ListaFila {
 
