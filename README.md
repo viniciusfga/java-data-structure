@@ -33,11 +33,7 @@ Organizar e implementar estruturas de dados clássicas utilizando Java, com foco
 
 - Ordenação
 - Busca
-- Problemas clássicos:
-    - Josephus
-    - Intercalação de listas
-    - Divisão de listas
-
+- Problemas clássicos
 ---
 
 ### 🧪 Exercícios
@@ -51,20 +47,22 @@ Organizar e implementar estruturas de dados clássicas utilizando Java, com foco
 ## 🗂 Estrutura do Projeto
 
 ```plaintext
-estrutura-de-dados/
+java-data-structure/
 │
-├── docs/                  → Materiais teóricos e slides
+├── docs/                  → Lista de Exercicios
 │
 ├── src/
 │   └───│ 
+│       ├── desafios/      → Problemas Desafiadores
+│       │
 │       ├── estruturas/    → Implementações principais
 │       │   ├── base/
 │       │   ├── lista/
 │       │   ├── fila/
 │       │   └── pilha/
 │       │
-│       ├── exemplos/      → Códigos de aula
+│       ├── exercicios/    → Listas e práticas
 │       │
-│       └── exercicios/    → Listas e práticas
+│       └── test/          → Testes
 │
 ├── README.md
