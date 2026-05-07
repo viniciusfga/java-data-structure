@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <module type="JAVA_MODULE" version="4">
-  <component name="NewModuleRootManager" inherit-compiler-output="true">
-    <exclude-output />
-    <content url="file://$MODULE_DIR$">
+  <component name="AdditionalModuleElements">
+    <content url="file://$MODULE_DIR$" dumb="true">
       <sourceFolder url="file://$MODULE_DIR$/Cartilha/src" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Curso/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/POO/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Slides/src" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Curso/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/Listas/Encadeada/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/Listas/Escadeada/src" isTestSource="false" generated="true" />
       <sourceFolder url="file://$MODULE_DIR$/src/Listas/Estatica/src" isTestSource="false" />
@@ -16,7 +15,5 @@
       <sourceFolder url="file://$MODULE_DIR$/src/exercicios/maratona/Lista/Lista Estatica/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/exercicios/maratona/Lista/src" isTestSource="false" />
     </content>
-    <orderEntry type="inheritedJdk" />
-    <orderEntry type="sourceFolder" forTests="false" />
   </component>
 </module>

@@ -48,21 +48,28 @@ Organizar e implementar estruturas de dados clássicas utilizando Java, com foco
 
 ```plaintext
 java-data-structure/
-│
-├── docs/                  → Lista de Exercicios
-│
+├── pom.xml                        # Arquivo de configuração na raiz
+├── docs/                          # PDFs e documentação acadêmica
+│   
 ├── src/
-│   └───│ 
-│       ├── desafios/      → Problemas Desafiadores
-│       │
-│       ├── estruturas/    → Implementações principais
-│       │   ├── base/
-│       │   ├── lista/
-│       │   ├── fila/
-│       │   └── pilha/
-│       │
-│       ├── exercicios/    → Listas e práticas
-│       │
-│       └── test/          → Testes
-│
-├── README.md
+│   ├── main/
+│   │   └── java/           
+│   │       └── br/com/ifgoiano/
+│   │           │
+│   │           ├── ed1/            # Estruturas e exercícios de ED1
+│   │           │   ├── estruturas/
+│   │           │   │   ├── base/
+│   │           │   │   ├── lista/
+│   │           │   │   ├── fila/
+│   │           │   │   └── pilha/
+│   │           │   ├── exercicios/
+│   │           │   └── desafios/
+│   │           │
+│   │           └── ed2/            # Estruturas e exercícios de ED2
+│   │    
+│   └ test/                         # Classes de teste JUnit
+│       └── java/          
+│           └── br/com/ifgoiano/ed1/
+│               └── estruturas/
+│                   └── PilhaTest.java
+└── README.md
