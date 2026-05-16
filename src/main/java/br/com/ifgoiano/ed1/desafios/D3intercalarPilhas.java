@@ -10,7 +10,7 @@ import br.com.ifgoiano.ed1.estruturas.pilha.Pilha;
 
 public class D3intercalarPilhas {
 
-    public static void intercalar(Pilha a, Pilha b) {
+    public static void intercalar(Pilha a, Pilha b) throws Exception {
         Pilha a1 = new Pilha(a.tamanho() + b.tamanho());
         Pilha b1 = new Pilha(a.tamanho() + b.tamanho());
         Pilha c = new Pilha(a.tamanho() + b.tamanho());
@@ -38,7 +38,7 @@ public class D3intercalarPilhas {
         c.imprimir();
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
 
         Pilha pilhaA = new Pilha(4);
         Pilha pilhaB = new Pilha(4);

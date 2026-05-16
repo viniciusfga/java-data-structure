@@ -1,9 +1,10 @@
 package br.com.ifgoiano.ed1.estruturas.pilha;
 
 public class Pilha {
-    int[] elementos;
-    int inicio;
-    int fim;
+
+    private int[] elementos;
+    private int inicio;
+    private int fim;
 
     public Pilha(int maxTam) {
         elementos = new int[maxTam];
@@ -11,12 +12,18 @@ public class Pilha {
         fim = 0;
     }
 
-    public void empilhar(int valor) {
+    public void empilhar(int valor) throws Exception {
+        if (cheia()) {
+            throw new Exception("Stack Overflow!");
+        }
         elementos[fim] = valor;
         fim++;
     }
 
-    public int desempilhar() {
+    public int desempilhar() throws Exception {
+        if (vazia()) {
+            throw new Exception("Stack is empty!");
+        }
         fim--;
         return elementos[fim];
     }
