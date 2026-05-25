@@ -1,0 +1,20 @@
+Para adicionar:
+
+SelectionSort.java
+
+1. Atualizar a main
+git checkout main
+git pull origin main
+
+2. Criar branch da feature
+git checkout -b feature/selection-sort
+
+3. Implementar
+src/java/br/com/ifgoiano/algoritimos/sort/SelectionSort.java
+
+4. Commitar
+git add .
+git commit -m "feat: add selection sort algorithm"
+
+5. Enviar branch
+git push origin feature/selection-sort
