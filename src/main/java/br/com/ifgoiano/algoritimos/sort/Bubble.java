@@ -1,4 +1,4 @@
-package br.com.ifgoiano.algoritimos;
+package br.com.ifgoiano.algoritimos.sort;
 
 /*
     Algoritmo Bubble Sort (Ordenação por Bolha)
@@ -16,7 +16,7 @@ package br.com.ifgoiano.algoritimos;
     - Pior caso: O(n²)
 */
 
-public class Bolha {
+public class Bubble {
 
     public static void main(String[] args) {
 
