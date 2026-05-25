@@ -1,0 +1,30 @@
+name: Restrict Paths
+
+on:
+  pull_request:
+    branches:
+      - main # Opcional: restringe a execução apenas para PRs direcionados à main
+
+jobs:
+  check-paths:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout do repositório
+        uses: actions/checkout@v4
+        with:
+          # É necessário buscar todo o histórico para o git diff funcionar
+          fetch-depth: 0
+
+      - name: Check changed files
+        run: |
+          # Compara a base do Pull Request com a branch atual
+          files=$(git diff --name-only ${{ github.event.pull_request.base.sha }} ${{ github.event.pull_request.head.sha }})
+
+          for file in $files; do
+            if [[ $file != src/java/br/com/ifgoiano/algoritimos/* ]]; then
+              echo "❌ Alteração não permitida: $file"
+              echo "Por favor, limite as alterações à pasta src/java/br/com/ifgoiano/algoritimos/"
+              exit 1
+            fi
+          done
