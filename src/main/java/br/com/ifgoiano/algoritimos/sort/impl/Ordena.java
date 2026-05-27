@@ -15,7 +15,7 @@ public class Ordena {
         }
     }
 
-    public static void insertionSort_1(int v[]) {
+    public static void insertionSort(int v[]) {
         int j = 0;
         for (int i = 1; i < v.length; i++) {
             int aux = v[i];
