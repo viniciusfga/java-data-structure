@@ -1,4 +1,4 @@
-package br.com.ifgoiano.algoritimos.sort.impl; /**
+package br.com.ifgoiano.algoritimos.sort.analise; /**
  * Autores: Vinicius Franco Gonçalves Araújo
  *          Rafael Belem Torres
  *          Rafael Henrico Gonçalves Justino

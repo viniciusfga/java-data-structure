@@ -1,4 +1,4 @@
-package br.com.ifgoiano.algoritimos.sort.impl;
+package br.com.ifgoiano.algoritimos.sort.analise;
 /**
  * Autores: Vinicius Franco Gonçalves Araújo
  *          Rafael Belem Torres
@@ -109,7 +109,8 @@ public class TesteOrdena {
             }
 
             // Adiciona ao CSV
-            resultadosCSV.append(String.format("%s,%d,%.2f,%.2f,%.2f\n",
+            resultadosCSV.append(String.format(java.util.Locale.US,
+                    "%s,%d,%.2f,%.2f,%.2f\n",
                     nomeDataset, tamanho, tempos[0], tempos[1], tempos[2]));
 
             System.out.println();
