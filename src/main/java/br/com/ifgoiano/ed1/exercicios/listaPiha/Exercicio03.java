@@ -8,33 +8,28 @@ import java.util.Stack;
  */
 public class Exercicio03 {
 
-    private static void empilhar(Stack<Integer> stackA, Stack<Integer> stackB) {
-            while(!stackB.empty()){
-                stackA.push(stackB.pop());
-            }
+    private static void empilhar(Stack<Integer> A, Stack<Integer> B) {
+        Stack<Integer> K = new Stack<>();
+
+        while(!B.empty()) K.push(B.pop());
+
+        while(!K.empty()) A.push(K.pop());
     }
 
     public static void main(String[] args) {
 
-        Stack<Integer> stackA = new Stack<>();
-        Stack<Integer> stackB = new Stack<>();
+        Stack<Integer> A = new Stack<>();
+        Stack<Integer> B = new Stack<>();
 
         for (int i = 1; i < 5; i++) {
-            stackA.push(i);
+            A.push(i);
         }
         for (int i = 5; i < 10; i++) {
-            stackB.push(i);
+            B.push(i);
         }
 
-        System.out.println("ORIGINAL");
-        stackA.forEach(x -> System.out.print(x + " "));
-        System.out.println();
-        stackB.forEach(x -> System.out.print(x + " "));
+        empilhar(A, B);
 
-        empilhar(stackA, stackB);
-
-        System.out.println("\nEMPILHADA");
-        stackA.forEach(x -> System.out.print(x + " "));
-
+        while (!A.empty()) System.out.println(A.pop() + " ");
     }
 }

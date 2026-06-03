@@ -32,35 +32,33 @@ public class Exercicio04 {
         }
     }
 
-    public boolean vazia(){
+    public boolean empty() {
         return topo == -1;
     }
 
-    public static boolean verificaPalidromo(Exercicio04 stack) {
-        Exercicio04 auxiliarA = new Exercicio04(stack.capacidade);
-        Exercicio04 auxiliarB = new Exercicio04(stack.capacidade);
-        Exercicio04 auxiliarC = new Exercicio04(stack.capacidade);
+    public static boolean verificaPalidromo(Exercicio04 S) {
+        Exercicio04 A = new Exercicio04(S.capacidade);
+        Exercicio04 B = new Exercicio04(S.capacidade);
+        Exercicio04 C = new Exercicio04(S.capacidade);
 
-        while(!stack.vazia()){
-            String valor = stack.pop();
-            auxiliarA.push(valor);
-            auxiliarB.push(valor);
+        while (!S.empty()) {
+            String valor = S.pop();
+            A.push(valor);
+            B.push(valor);
         }
 
-        while(!auxiliarB.vazia()){
-            String valor = auxiliarB.pop();
-            auxiliarC.push(valor);
+        while (!B.empty()) {
+            String valor = B.pop();
+            C.push(valor);
         }
 
-        while (!auxiliarC.vazia()){
-            String elementoA = auxiliarA.pop();
-            String elementoC = auxiliarC.pop();
-
-            stack.push(elementoA);
-
-            if (!elementoA.equals(elementoC)) {
+        while (!C.empty()) {
+            String valorA = C.pop();
+            String valorB = A.pop();
+            if (!valorA.equals(valorB)) {
                 return false;
             }
+            S.push(valorA);
         }
 
         return true;
@@ -68,13 +66,13 @@ public class Exercicio04 {
 
     public static void main(String[] args) {
 
-        Exercicio04 stack = new Exercicio04(4);
+        Exercicio04 A = new Exercicio04(4);
 
-        stack.push("A");
-        stack.push("B");
-        stack.push("B");
-        stack.push("E");
+        A.push("A");
+        A.push("B");
+        A.push("B");
+        A.push("A");
 
-        System.out.println(verificaPalidromo(stack));
+        System.out.println(verificaPalidromo(A));
     }
 }

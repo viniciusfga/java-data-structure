@@ -4,44 +4,45 @@ package br.com.ifgoiano.algoritimos.sort;
     Algoritmo Bubble Sort (Ordenação por Bolha)
 
     Funcionamento:
-    - Percorre o vetor várias vezes.
-    - Compara elementos adjacentes.
-    - Realiza troca caso estejam fora de ordem.
-    - A cada passagem, o maior elemento "borbulha"
-      para o final do vetor.
+    - Percorre a lista comparando pares adjacentes e os troca se estiverem fora de ordem.
+
+    Trocas:
+    - Muitas trocas contínuas.
 
     Complexidade:
-    - Melhor caso: O(n²)
+    - Melhor caso: O(n)
     - Médio caso: O(n²)
     - Pior caso: O(n²)
 */
 
+import static br.com.ifgoiano.algoritimos.sort.Utils.imprimir;
+
 public class Bubble {
 
-    public static void main(String[] args) {
+    void bubbleSort(int[] vetor) {
+        int i, p;
+        boolean trocou;
+        int aux;
 
-        int[] vetor = {2, 8, 5, 3, 6, 9, 4, 1};
-        for (int numeros : vetor) {
-            System.out.print(numeros + " ");
-        }
-        System.out.println();
-        int n = vetor.length;
+        p = vetor.length - 1;
+        trocou = true;
 
-        for (int i = 0; i < n; i++) {
+        while (p > 0 && trocou) {
+            trocou = false;
+            i = 0;
 
-            for (int j = 0; j < n - 1; j++) {
-
-                if (vetor[j] > vetor[j + 1]) {
-
-                    int aux = vetor[j];
-                    vetor[j] = vetor[j + 1];
-                    vetor[j + 1] = aux;
+            while (i < p) {
+                if (vetor[i] > vetor[i + 1]) {
+                    aux = vetor[i];
+                    vetor[i] = vetor[i + 1];
+                    vetor[i + 1] = aux;
+                    trocou = true;
                 }
+                i++;
             }
-        }
+            p--;
 
-        for (int numeros : vetor) {
-            System.out.print(numeros + " ");
+            imprimir(vetor);
         }
     }
 }

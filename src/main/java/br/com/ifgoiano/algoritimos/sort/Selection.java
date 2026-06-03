@@ -1,5 +1,22 @@
 package br.com.ifgoiano.algoritimos.sort;
 
+import static br.com.ifgoiano.algoritimos.sort.Utils.imprimir;
+
+/*
+    Algoritmo Selection Sort (Ordenação por seleção)
+
+    Funcionamento:
+    - Minimiza trocas
+    - Busca o menor elemento a cada iteração e o coloca na posição correta
+
+     Trocas:
+    - Poucas trocas (no máximo uma por passada).
+
+    Complexidade:
+    - Melhor caso: O(n²)
+    - Médio caso: O(n²)
+    - Pior caso: O(n²)
+*/
 public class Selection {
 
     void selectionSort(int[] vetor) {
@@ -18,12 +35,5 @@ public class Selection {
 
             imprimir(vetor);
         }
-    }
-
-    public static void imprimir(int[] vetor) {
-        for (int i = 0; i < vetor.length; i++) {
-            System.out.printf(" | %d", vetor[i]);
-        }
-        System.out.println(" |");
     }
 }

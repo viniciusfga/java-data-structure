@@ -1,0 +1,19 @@
+Configuração Passo a Passo:
+
+1. I(10)  -> Pilha: [10] (Topo: 10)
+2. I(20)  -> Pilha: [10, 20] (Topo: 20)
+3. R      -> Pilha: [10] (Topo: 10)
+4. I(30)  -> Pilha: [10, 30] (Topo: 30)
+5. I(45)  -> Pilha: [10, 30, 45] (Topo: 45)
+6. I(21)  -> Pilha: [10, 30, 45, 21] (Topo: 21)
+7. R      -> Pilha: [10, 30, 45] (Topo: 45)
+8. R      -> Pilha: [10, 30] (Topo: 30)
+
+Resposta Final:
+A configuração final da pilha é [10, 30], onde 10 é o fundo e 30 é o topo.
+
+Visualização da Estrutura Final:
+|    |
+| 30 | <- TOPO
+| 10 | <- FUNDO
+------

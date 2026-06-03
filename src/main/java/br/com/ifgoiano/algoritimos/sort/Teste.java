@@ -6,9 +6,10 @@ public class Teste {
 
         Selection selection = new Selection();
         Insertion insertion = new Insertion();
+        Bubble bubble = new Bubble();
 
         int[] vetor = {4, 7, 2 ,8 , 3};
 
-        insertion.insertion(vetor);
+        bubble.bubbleSort(vetor);
     }
 }

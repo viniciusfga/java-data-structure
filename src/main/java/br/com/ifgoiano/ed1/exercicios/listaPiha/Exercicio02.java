@@ -7,38 +7,35 @@ import java.util.Stack;
  */
 public class Exercicio02 {
 
-    public static void inverterPilha(Stack<Integer> P){
-        Stack<Integer> auxiliarA = new Stack<>();
-        Stack<Integer> auxiliarB = new Stack<>();
+    public static void inverterPilha(Stack<Integer> P) {
+        Stack<Integer> A = new Stack<>();
+        Stack<Integer> B = new Stack<>();
 
-        while (!P.empty()){
-            auxiliarA.push(P.pop());
-        }
-
-        while (!auxiliarA.empty()){
-            auxiliarB.push(auxiliarA.pop());
-        }
-
-        while (!auxiliarB.empty()){
-            P.push(auxiliarB.pop());
-        }
-
+        while (!P.empty()) A.push(P.pop());
+        while (!A.empty()) B.push(A.pop());
+        while (!B.empty()) P.push(B.pop());
     }
 
     public static void main(String[] args) {
 
-        Stack<Integer> stack = new Stack<>();
+        Stack<Integer> s = new Stack<>();
 
-        for (int i = 1; i < 10; i++) {
-            stack.push(i);
+        for (int i = 1; i <= 5; i++) s.push(i);
+
+        Stack<Integer> aux = new Stack<>();
+        while (!s.empty()) {
+            System.out.print(s.peek() + " ");
+            aux.push(s.pop());
         }
 
-        System.out.println("ORIGINAL");
-        stack.forEach(x -> System.out.print(x + " "));
+        while (!aux.empty()) s.push(aux.pop());
 
-        inverterPilha(stack);
+        inverterPilha(s);
 
-        System.out.println("\nINVERTIDA");
-        stack.forEach(x -> System.out.print(x + " "));
+        System.out.println();
+        while (!s.empty()) {
+            System.out.print(s.pop() + " ");
+        }
+
     }
 }

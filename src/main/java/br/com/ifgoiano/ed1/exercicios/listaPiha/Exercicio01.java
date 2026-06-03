@@ -32,13 +32,13 @@ public class Exercicio01 {
         }
 
         System.out.println("ORIGINAL");
-        stack.forEach(x -> System.out.print(x + " "));
+        stack.forEach(elemento -> System.out.print(elemento + " "));
 
         removerImpares(stack);
 
         // DEPOIS DE RETIRAR OS IMPARES
         System.out.println("\nNova pilha:");
-        stack.forEach(x -> System.out.print( + x + " "));
+        stack.forEach(elemento -> System.out.print( + elemento + " "));
 
     }
 }
