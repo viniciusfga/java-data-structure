@@ -87,24 +87,14 @@ Tamanhos: 10.000, 20.000, 30.000, 40.000, 50.000, 60.000, 70.000, 80.000, 90.000
 - Python 3.6+ (para gráficos)
 - Bibliotecas Python: pandas, matplotlib, numpy
 
-### Instalação das Dependências Python
-```bash
-pip install pandas matplotlib numpy
-```
-
 ### Compilação e Execução
 
-#### 1. Compilar os arquivos Java
-```bash
-javac *.java
-```
-
-#### 2. Executar teste rápido (verificação)
+#### 1. Executar teste rápido (verificação)
 ```bash
 java TesteOrdena --rapido
 ```
 
-#### 3. Executar testes completos (100 execuções cada)
+#### 2. Executar testes completos (100 execuções cada)
 ```bash
 java TesteOrdena
 ```
@@ -157,44 +147,6 @@ python3 gerar_graficos.ipynb
     - Desempenho médio: O(n log n)
     - Pior caso raro com pivô aleatório: O(n²)
 - **Quando usar:** Vetores grandes e médios (padrão na maioria dos casos)
-
-### Comparação Prática
-
-Para um vetor de **100.000 elementos**:
-
-| Algoritmo      | Tempo Esperado | Speedup vs QuickSort |
-|----------------|----------------|----------------------|
-| SelectionSort  | ~20-30 segundos| 1000x mais lento     |
-| InsertionSort  | ~15-25 segundos| 800x mais lento      |
-| QuickSort      | ~20-30 ms      | Baseline (1x)        |
-
-**Speedup** = Quanto mais rápido o QuickSort é em relação ao outro algoritmo
-
----
-
-## 📊 Gráficos Gerados
-
-O script Python gera 5 gráficos diferentes:
-
-1. **grafico_comparacao_geral.png**
-    - Comparação de todos os algoritmos
-    - Todos os tamanhos de vetores
-
-2. **grafico_dataset1.png**
-    - Foco no Dataset 1 (1k-10k elementos)
-    - Escala apropriada para vetores menores
-
-3. **grafico_dataset2.png**
-    - Foco no Dataset 2 (10k-100k elementos)
-    - Mostra a diferença dramática em grandes volumes
-
-4. **grafico_barras_comparacao.png**
-    - Gráfico de barras para tamanhos específicos
-    - Comparação lado a lado
-
-5. **grafico_escala_log.png**
-    - Escala logarítmica
-    - Melhor visualização das diferenças relativas
 
 ---
 
@@ -253,16 +205,6 @@ Dataset1,1000,12.45,8.32,0.45
 Dataset1,2000,49.87,33.21,1.02
 ...
 ```
-
-### 2. Gráficos PNG
-- 5 gráficos de análise
-- Alta resolução (300 DPI)
-- Prontos para apresentação
-
-### 3. Console Output
-- Progresso em tempo real
-- Verificação de ordenação
-- Resumo final
 
 ---
 
