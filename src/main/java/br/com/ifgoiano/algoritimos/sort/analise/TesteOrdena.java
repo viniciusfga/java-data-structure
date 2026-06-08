@@ -1,12 +1,11 @@
 package br.com.ifgoiano.algoritimos.sort.analise;
+
 /**
  * Autores: Vinicius Franco Gonçalves Araújo
- *          Rafael Belem Torres
- *          Rafael Henrico Gonçalves Justino
- *
+ * <p>
  * Disciplina: Estrutura de Dados I
  * Data: 26/05/2026
- *
+ * <p>
  * Objetivo: Classe responsável por realizar os testes de desempenho dos
  * algoritmos de ordenação. Executa cada algoritmo 100 vezes para cada
  * dataset e calcula a média dos tempos de execução.
@@ -16,7 +15,7 @@ import java.io.IOException;
 
 public class TesteOrdena {
 
-    private static final int NUMERO_EXECUCOES = 10;
+    private static final int NUMERO_EXECUCOES = 100;
 
     /**
      * Testa um algoritmo de ordenação específico

@@ -1,11 +1,11 @@
-package br.com.ifgoiano.algoritimos.sort.analise; /**
+package br.com.ifgoiano.algoritimos.sort.analise;
+
+/**
  * Autores: Vinicius Franco Gonçalves Araújo
- *          Rafael Belem Torres
- *          Rafael Henrico Gonçalves Justino
- *
+ * <p>
  * Disciplina: Estrutura de Dados I
  * Data: 26/05/2026
- *
+ * <p>
  * Objetivo: Classe utilitária que contém métodos para geração de vetores,
  * leitura e escrita de arquivos, e outras operações auxiliares necessárias
  * para os testes de ordenação.

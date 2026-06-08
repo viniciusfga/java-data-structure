@@ -2,12 +2,10 @@ package br.com.ifgoiano.algoritimos.sort.analise;
 
 /**
  * Autores: Vinicius Franco Gonçalves Araújo
- *          Rafael Belem Torres
- *          Rafael Henrico Gonçalves Justino
- *
+ * <p>
  * Disciplina: Estrutura de Dados I
  * Data: 26/05/2026
- *
+ * <p>
  * Objetivo: Classe que representa um item a ser ordenado.
  * Contém um valor inteiro e implementa a interface Comparable
  * para permitir comparações entre objetos.

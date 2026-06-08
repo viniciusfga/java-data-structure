@@ -1,0 +1,114 @@
+\documentclass[a4paper,12pt]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[brazil]{babel}
+\usepackage{amsmath}
+
+\title{Funcionamento da Seed e Geração de Números Pseudoaleatórios}
+\author{}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+\section{O que é uma Seed?}
+
+Uma \textit{seed} (semente) é o valor inicial utilizado por um gerador de números pseudoaleatórios.
+Quando a mesma seed é utilizada, a sequência de números gerada será sempre a mesma.
+
+Por exemplo:
+
+\begin{verbatim}
+Random random = new Random(42);
+\end{verbatim}
+
+Toda execução iniciada com a seed 42 produzirá a mesma sequência de números.
+
+\section{Gerador Linear Congruente}
+
+O algoritmo clássico utilizado em diversos geradores pseudoaleatórios é o
+\textit{Linear Congruential Generator} (LCG), definido pela equação:
+
+\[
+X_{n+1} = (aX_n + c) \bmod m
+\]
+
+onde:
+
+\begin{itemize}
+    \item $X_n$ é o estado atual;
+    \item $a$ é o multiplicador;
+    \item $c$ é o incremento;
+    \item $m$ é o módulo;
+    \item $X_{n+1}$ é o próximo valor gerado.
+\end{itemize}
+
+\section{Exemplo Simples}
+
+Considere o gerador fictício:
+
+\[
+X_{n+1} = (3X_n + 7) \bmod 100
+\]
+
+com seed inicial:
+
+\[
+X_0 = 42
+\]
+
+\subsection*{Primeiro número}
+
+\[
+X_1 = (3 \times 42 + 7) \bmod 100
+\]
+
+\[
+X_1 = 133 \bmod 100
+\]
+
+\[
+X_1 = 33
+\]
+
+\subsection*{Segundo número}
+
+\[
+X_2 = (3 \times 33 + 7) \bmod 100
+\]
+
+\[
+X_2 = 106 \bmod 100
+\]
+
+\[
+X_2 = 6
+\]
+
+\subsection*{Terceiro número}
+
+\[
+X_3 = (3 \times 6 + 7) \bmod 100
+\]
+
+\[
+X_3 = 25
+\]
+
+A sequência produzida é:
+
+\[
+42 \rightarrow 33 \rightarrow 6 \rightarrow 25 \rightarrow \cdots
+\]
+
+Sempre que a seed inicial for 42, a mesma sequência será obtida.
+
+\section{Aplicação no Experimento}
+
+Nos testes dos algoritmos de ordenação, a utilização de uma seed fixa garante
+que todos os algoritmos recebam exatamente o mesmo conjunto de dados,
+permitindo uma comparação justa dos tempos de execução.
+
+\end{document}

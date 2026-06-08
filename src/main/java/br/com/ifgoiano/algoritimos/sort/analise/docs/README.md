@@ -2,8 +2,6 @@
 
 **Autores:**
 - Vinicius Franco Gonçalves Araújo
-- Rafael Belem Torres
-- Rafael Henrico Gonçalves Justino
 
 **Disciplina:** Estrutura de Dados I  
 **Data:** 26/05/2026
@@ -53,9 +51,7 @@ Tamanhos: 10.000, 20.000, 30.000, 40.000, 50.000, 60.000, 70.000, 80.000, 90.000
 ├── Item.java              # Classe que representa o objeto a ser ordenado
 ├── Ordena.java            # Implementações dos algoritmos de ordenação
 ├── Utilidades.java        # Geração de vetores e operações auxiliares
-├── TesteOrdena.java       # Testes e medição de desempenho
-├── gerar_graficos.py      # Script para gerar gráficos de análise
-└── README.md              # Este arquivo
+└── TesteOrdena.java       # Testes e medição de desempenho
 ```
 
 ### Descrição das Classes
@@ -121,7 +117,7 @@ Este comando irá:
 
 #### 4. Gerar gráficos de análise
 ```bash
-python3 gerar_graficos.py
+python3 gerar_graficos.ipynb
 ```
 
 ---
