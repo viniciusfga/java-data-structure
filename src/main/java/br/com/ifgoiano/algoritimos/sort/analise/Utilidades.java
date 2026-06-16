@@ -1,5 +1,4 @@
 package br.com.ifgoiano.algoritimos.sort.analise;
-
 /**
  * Autores: Vinicius Franco Gonçalves Araújo
  * <p>
